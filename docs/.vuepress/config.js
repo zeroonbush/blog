@@ -2,7 +2,7 @@ module.exports = {
     title: 'lhs的个人博客',
     keywords: '前端开发',
     description: '前端开发 lhs的个人博客',
-    repo: 'https://github.com/zeroonbush/blog',
+    repo: 'https://github.com/zeroonbush/blog.git',
     base: '/blog/',
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }]
@@ -24,12 +24,17 @@ module.exports = {
                     { text: 'June', link: '/2020/6/' }
                 ]
             },
-            { text: 'github', link: 'https://www.baidu.com' }
+            { text:'其他',link:'/other/' },
+            { text: 'github', link: 'https://github.com/zeroonbush/blog.git' }
         ],
         sidebar: {
             '/2020/': [
                 ['/2020/5/', '5月份'],
                 ['/2020/6/', '6月份']
+            ],
+            '/other/':[
+                '',
+                'vuepress搭建个人博客并部署'
             ]
         }
     }
