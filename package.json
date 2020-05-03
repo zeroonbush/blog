@@ -1,0 +1,16 @@
+{
+  "name": "myblog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "gh-pages -d docs/.vuepress/dist",
+    "commit": "yarn build && yarn deploy"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0",
+    "vuepress": "^1.4.1"
+  }
+}
