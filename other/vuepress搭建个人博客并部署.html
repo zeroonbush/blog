@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vuepress搭建个人博客并部署 | lhs的个人博客</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/blog/favicon.ico">
+    <meta name="description" content="前端开发 lhs的个人博客">
+    <link rel="preload" href="/blog/assets/css/0.styles.713b5711.css" as="style"><link rel="preload" href="/blog/assets/js/app.8be60aea.js" as="script"><link rel="preload" href="/blog/assets/js/2.ff01217f.js" as="script"><link rel="preload" href="/blog/assets/js/11.c20e84ae.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.ca717b60.js"><link rel="prefetch" href="/blog/assets/js/12.1d9fe352.js"><link rel="prefetch" href="/blog/assets/js/13.b268187c.js"><link rel="prefetch" href="/blog/assets/js/14.8b3e2010.js"><link rel="prefetch" href="/blog/assets/js/3.65c9b8a0.js"><link rel="prefetch" href="/blog/assets/js/4.4d64059e.js"><link rel="prefetch" href="/blog/assets/js/5.0c3b9413.js"><link rel="prefetch" href="/blog/assets/js/6.81fd7f7a.js"><link rel="prefetch" href="/blog/assets/js/7.52176edb.js"><link rel="prefetch" href="/blog/assets/js/8.0bfb9f78.js"><link rel="prefetch" href="/blog/assets/js/9.fc89d6b2.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.713b5711.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/logo.png" alt="lhs的个人博客" class="logo"> <span class="site-name can-hide">lhs的个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/js_docs/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/blog/css_docs/" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><a href="/blog/vue_docs/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/blog/react_docs/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="2020" class="dropdown-title"><span class="title">2020</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/2020/5/" class="nav-link">
+  May
+</a></li><li class="dropdown-item"><!----> <a href="/blog/2020/6/" class="nav-link">
+  June
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/other/" class="nav-link router-link-active">
+  其他
+</a></div><div class="nav-item"><a href="https://github.com/zeroonbush/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/js_docs/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/blog/css_docs/" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><a href="/blog/vue_docs/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/blog/react_docs/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="2020" class="dropdown-title"><span class="title">2020</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/2020/5/" class="nav-link">
+  May
+</a></li><li class="dropdown-item"><!----> <a href="/blog/2020/6/" class="nav-link">
+  June
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/other/" class="nav-link router-link-active">
+  其他
+</a></div><div class="nav-item"><a href="https://github.com/zeroonbush/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/other/" class="sidebar-link">第一篇博客在这里,你找到了吗</a></li><li><a href="/blog/other/vuepress搭建个人博客并部署.html" class="active sidebar-link">vuepress搭建个人博客并部署</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/other/vuepress搭建个人博客并部署.html#搭建" class="sidebar-link">搭建</a></li><li class="sidebar-sub-header"><a href="/blog/other/vuepress搭建个人博客并部署.html#部署" class="sidebar-link">部署</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vuepress搭建个人博客并部署"><a href="#vuepress搭建个人博客并部署" class="header-anchor">#</a> vuepress搭建个人博客并部署</h1> <blockquote><p>想要快速搭建自己的个人博客,记录自己的工作学习心得,争取当一条有梦想的咸鱼</p></blockquote> <p>相信大家都了解过vue这个框架.而今天,我们的主角<code>vuepress</code> 就是vue的作者<code>尤大大</code>的一个作品.开源于大概2年前,其本意是用来为vue及其子项目写文档,现在被大部分人用来搭建个人博客.之前一直有所耳闻,vuepress可以搭建博客,但也只是有所耳闻罢了,这回趁着五一在家休息的时间,简单的学了下vuepress的用法.
+今天在这里,我会从头一步步的将我的代码展示给大家看,如何从0开始搭建一个个人博客,并且部署到线上.传统的部署需要我们去购买服务器,域名,还需要做域名解析,备案之类的事情,往往需要一段时间才能完成.因此今天我们将我们的博客项目部署到github上.对的,你没有看错,github不仅仅只是一个保存我们代码的网站,它还可以帮助我们展示一些静态页面.今天我们就用<code>github pages</code> 来发布自己的静态博客.</p> <h2 id="搭建"><a href="#搭建" class="header-anchor">#</a> 搭建</h2> <h3 id="初始化创建"><a href="#初始化创建" class="header-anchor">#</a> 初始化创建</h3> <p>首先,我们在终端输入以下命令,来创建一个空文件夹并且进入到这个文件夹</p> <div class="language- extra-class"><pre class="language-text"><code>mkdir myblog &amp;&amp; cd $_
+</code></pre></div><p>初始化我们的项目</p> <div class="language- extra-class"><pre class="language-text"><code>yarn init -y
+</code></pre></div><p>接着是安装我们的依赖vuepress</p> <div class="language- extra-class"><pre class="language-text"><code>yarn add -D vuepress
+</code></pre></div><p>安装好依赖以后,我们可以在终端键入</p> <div class="language- extra-class"><pre class="language-text"><code>mkdir docs
+echo '# This is my blog' &gt; docs/README.md
+</code></pre></div><p>那么就可以看到在项目中有个docs的文件夹了,并且里面有个README.md的文件.
+接下来我们来启动我们的项目,vuepress 提供了如下命令来启动和打包我们的项目</p> <div class="language- extra-class"><pre class="language-text"><code>vuepress dev docs
+vuepress build docs
+</code></pre></div><p>我们在 package.json 中来创建两个简单的命令来代替上面的指令</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;vuepress dev docs&quot;, //启动项目
+    &quot;build&quot;: &quot;vuepress build docs&quot; // 编译项目
+  }
+}
+</code></pre></div><p>至此,我们就可以通过<code>yarn dev</code> 来启动项目了,这时打开网址可以看到我们的项目已经运行成功了,页面如下:
+<img src="https://img-blog.csdnimg.cn/2020050311021242.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vZ3V6aGFsZQ==,size_16,color_FFFFFF,t_70" alt="初始化页面"></p> <h3 id="配置项目"><a href="#配置项目" class="header-anchor">#</a> 配置项目</h3> <p>接下来就是来配置我们的项目结构了,如标题,导航之类的.vuepress有个<code>&quot;约定大于配置&quot;</code>的思想在里面,就是说很多东西,作者已经给我们都设置好了,我们只要按照作者提供的文档一步步将我们的东西填入其中,就可以完成我们想要的东西.
+我们在docs文件夹中新创建一个 <code>.vuepress</code> 文件夹 ,并在其中新建一个<code>config.js</code> 配置文件:</p> <div class="language- extra-class"><pre class="language-text"><code>module.exports = {
+    title: 'lhs的个人博客',  //标题
+    keywords: '前端开发',
+    description: '前端开发 lhs的个人博客',
+    repo: 'https://github.com/zeroonbush/blog.git',  //仓库地址
+    base: '/blog/',  // 配合部署项目
+    head: [
+        ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ],
+    lastUpdated: 'Last Updated',
+    themeConfig: {  //主题配置
+        logo: '/img/logo.png',
+        nav: [  //导航栏
+            { text: '首页', link: '/' },
+            { text: 'JS', link: '/js_docs/' },
+            { text: 'CSS', link: '/css_docs/' },
+            { text: 'Vue', link: '/vue_docs/' },
+            { text: 'React', link: '/react_docs/' },
+            {
+                text: '2020',
+                ariLabel: '2020',
+                items: [  //多级导航栏
+                    { text: 'May', link: '/2020/5/' },
+                    { text: 'June', link: '/2020/6/' }
+                ]
+            },
+            { text: 'github', link: 'https://github.com/zeroonbush/blog.git' }
+        ],
+        sidebar: {  //侧边拦
+            '/2020/': [
+                ['/2020/5/', '5月份'],
+                ['/2020/6/', '6月份']
+            ]
+        }
+    }
+}
+</code></pre></div><p>在写了上面的配置之后,要记得在.vuepress文件夹中新建一个<code>public</code>文件夹,将我们的图片资源放入其中.我们在引用图片资源的时候,都是以其为根目录的.此时可以看到我们的项目已经变成下面的样子,已经有了顶部的导航栏.点击2020,可以看到还有下拉框,点击下拉框中的选项还能看到连侧边栏都已经有了.
+<img src="https://img-blog.csdnimg.cn/20200503111454223.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vZ3V6aGFsZQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p> <h3 id="配置首页结构"><a href="#配置首页结构" class="header-anchor">#</a> 配置首页结构</h3> <p>不知道大家到这里有没有发现,这个界面和vue,vuepress的官网有点像.没错,他们就是用vuepress来写的,前面也提到了,vuepress设计之初就是为了写文档,QAQ.
+现在看主页的内容是不是太空白了点呢,我们来给他添加点东西吧.
+我们将刚开始创建的README.md文件内容改成如下:</p> <div class="language- extra-class"><pre class="language-text"><code>---
+home: true
+heroImage: /img/banner.png
+heroText: lhs的日常记录
+tagline: 喜欢打王者,只会射手
+features:
+- title: 是个160斤的胖子
+  details: 是个160多斤的胖子,想要减肥,哪天你看不到这段话了,那说明我已经瘦下来了
+---
+</code></pre></div><p>至此,基本的页面布局已经差不多了,
+<img src="https://img-blog.csdnimg.cn/20200503121805215.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vZ3V6aGFsZQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p> <h2 id="部署"><a href="#部署" class="header-anchor">#</a> 部署</h2> <p>在完成我们的个人博客后,我们下一步需要做的就是将我们的个人博客部署到线上去,让其他人能够访问到.</p> <h3 id="github-pages"><a href="#github-pages" class="header-anchor">#</a> Github Pages</h3> <p>今天,我们不用传统的购买服务器域名那一套,我们使用Github Pages 来部署.在github上展示静态网站有两个方法.</p> <h4 id="创建-username-github-io-仓库"><a href="#创建-username-github-io-仓库" class="header-anchor">#</a> 创建 username.github.io 仓库</h4> <p>第一个是创建一个 github用户名.github.io 的仓库,别人通过 yourUserName.github.io 就能访问到我们的项目.点击查看:<a href="https://zeroonbush.github.io/" target="_blank" rel="noopener noreferrer">https://zeroonbush.github.io/<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>
+.</p> <h4 id="创建gh-pages-分支"><a href="#创建gh-pages-分支" class="header-anchor">#</a> 创建gh-pages 分支</h4> <p>第二个是创建一个项目,并且创建一个<code>gh-pages</code> 的分支,我们将打包后的代码放到这个分支,别人就能通过  https://yourUserName.github.io/yourProjectName 来访问到我们的项目,点击查看:<a href="https://zeroonbush.github.io/blog/" target="_blank" rel="noopener noreferrer">https://zeroonbush.github.io/blog/<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h4 id="如何方便快速部署"><a href="#如何方便快速部署" class="header-anchor">#</a> 如何方便快速部署?</h4> <p>为了方便部署,我们可以安装一个插件叫做 <code>gh-pages</code></p> <div class="language- extra-class"><pre class="language-text"><code>yarn add -D gh-pages
+</code></pre></div><p>然后修改package.json中的脚本命令,添加如下的两条,</p> <div class="language- extra-class"><pre class="language-text"><code>&quot;deploy&quot;: &quot;gh-pages -d docs/.vuepress/dist&quot;,
+&quot;commit&quot;: &quot;yarn build &amp;&amp; yarn deploy&quot;
+</code></pre></div><p>然后运行<code>yarn commit</code>命令,如果出现下面的报错,则是因为你的项目还没有关联仓库地址,只要关联下问题就解决了.至于如何关联,其实我们在github创建空项目的时候,github会告诉我们该如何做.这个比较简单,这里就不做过多阐述了.
+<img src="https://img-blog.csdnimg.cn/2020050312364494.png" alt="在这里插入图片描述">
+关联成功以后,我们再次执行下命令,如果出现如下的提示,那就证明我们已经成功了.
+<img src="https://img-blog.csdnimg.cn/20200503124658542.png" alt="在这里插入图片描述">
+然后我们访问我们的项目,可以看到我们的个人博客已经展示出来了,如果出现<code>css</code>或<code>js</code>加载不到的情况,则注意配置中的<code>base</code> 属性,这里面需要填写我们的项目名.</p> <p>至此,我们已经使用了<code>vuepress</code>搭建了一个个人博客,并且使用了<code>Github Pages</code>来部署我们的博客,今天的任务基本算是大功告成了.好了.到了该放松的时刻,选出我们的<code>小鲁班</code>,去找凯爹突突突吧!</p> <blockquote><p>项目地址: <a href="https://github.com/zeroonbush/blog" target="_blank" rel="noopener noreferrer">https://github.com/zeroonbush/blog<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>
+可直接下载源代码运行以查看效果</p></blockquote></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/other/" class="prev router-link-active">
+        第一篇博客在这里,你找到了吗
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.8be60aea.js" defer></script><script src="/blog/assets/js/2.ff01217f.js" defer></script><script src="/blog/assets/js/11.c20e84ae.js" defer></script>
+  </body>
+</html>
