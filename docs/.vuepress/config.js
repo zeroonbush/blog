@@ -14,6 +14,7 @@ module.exports = {
             { text: '首页', link: '/' },
             { text: 'JS', link: '/js_docs/' },
             { text: 'CSS', link: '/css_docs/' },
+            { text: 'Node', link: '/node_docs/' },
             { text: 'Vue', link: '/vue_docs/' },
             { text: 'React', link: '/react_docs/' },
             {
@@ -35,6 +36,10 @@ module.exports = {
             '/other/':[
                 '',
                 'vuepress搭建个人博客并部署'
+            ],
+            '/node_docs/':[
+                '',
+                'node发送邮件'
             ]
         }
     }
