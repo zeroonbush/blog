@@ -29,6 +29,10 @@ module.exports = {
             { text: 'github', link: 'https://github.com/zeroonbush/blog.git' }
         ],
         sidebar: {
+            '/js_docs/':[
+               '',
+               'JS精度问题'
+            ],
             '/2020/': [
                 ['/2020/5/', '5月份'],
                 ['/2020/6/', '6月份']
