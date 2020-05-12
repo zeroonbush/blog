@@ -39,7 +39,8 @@ module.exports = {
             ],
             '/other/':[
                 '',
-                'vuepress搭建个人博客并部署'
+                'vuepress搭建个人博客并部署',
+                'Git常用指令'
             ],
             '/node_docs/':[
                 '',
