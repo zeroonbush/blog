@@ -42,7 +42,8 @@ module.exports = {
                 '',
                 'vuepress搭建个人博客并部署',
                 'Git常用指令',
-                'npm发包流程'
+                'npm发包流程',
+                '发行ERC20代币'
             ],
             '/node_docs/':[
                 '',
