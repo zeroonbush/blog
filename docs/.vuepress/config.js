@@ -13,18 +13,18 @@ module.exports = {
         nav: [
             { text: '首页', link: '/' },
             { text: 'JS', link: '/js_docs/' },
-            { text: 'CSS', link: '/css_docs/' },
+            // { text: 'CSS', link: '/css_docs/' },
             { text: 'Node', link: '/node_docs/' },
-            { text: 'Vue', link: '/vue_docs/' },
-            { text: 'React', link: '/react_docs/' },
-            {
-                text: '2020',
-                ariLabel: '2020',
-                items: [
-                    { text: 'May', link: '/2020/5/' },
-                    { text: 'June', link: '/2020/6/' }
-                ]
-            },
+            // { text: 'Vue', link: '/vue_docs/' },
+            // { text: 'React', link: '/react_docs/' },
+            // {
+            //     text: '2020',
+            //     ariLabel: '2020',
+            //     items: [
+            //         { text: 'May', link: '/2020/5/' },
+            //         { text: 'June', link: '/2020/6/' }
+            //     ]
+            // },
             { text:'其他',link:'/other/' },
             { text: 'github', link: 'https://github.com/zeroonbush/blog.git' }
         ],
