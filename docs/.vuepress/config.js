@@ -41,7 +41,8 @@ module.exports = {
             '/other/':[
                 '',
                 'vuepress搭建个人博客并部署',
-                'Git常用指令'
+                'Git常用指令',
+                'npm发包流程'
             ],
             '/node_docs/':[
                 '',
