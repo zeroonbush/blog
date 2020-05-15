@@ -31,7 +31,8 @@ module.exports = {
         sidebar: {
             '/js_docs/':[
                '',
-               'JS精度问题'
+               'JS精度问题',
+               'void 0与undefined的关系',
             ],
             '/2020/': [
                 ['/2020/5/', '5月份'],
@@ -44,7 +45,8 @@ module.exports = {
             ],
             '/node_docs/':[
                 '',
-                'node发送邮件'
+                'node发送邮件',
+                'exports和module.exports',
             ]
         }
     }
