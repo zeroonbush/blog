@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>如何基于ERC20发行自己的代币 | lhs的个人博客</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/blog/favicon.ico">
+    <meta name="description" content="前端开发 lhs的个人博客">
+    <link rel="preload" href="/blog/assets/css/0.styles.713b5711.css" as="style"><link rel="preload" href="/blog/assets/js/app.1bea9912.js" as="script"><link rel="preload" href="/blog/assets/js/2.e1b088a4.js" as="script"><link rel="preload" href="/blog/assets/js/19.7b3766c1.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.4dfa1169.js"><link rel="prefetch" href="/blog/assets/js/11.82aa951e.js"><link rel="prefetch" href="/blog/assets/js/12.222e94c5.js"><link rel="prefetch" href="/blog/assets/js/13.f763d62a.js"><link rel="prefetch" href="/blog/assets/js/14.bd32a30f.js"><link rel="prefetch" href="/blog/assets/js/15.9511fbf1.js"><link rel="prefetch" href="/blog/assets/js/16.48f5f3e2.js"><link rel="prefetch" href="/blog/assets/js/17.616eae56.js"><link rel="prefetch" href="/blog/assets/js/18.2808f0f8.js"><link rel="prefetch" href="/blog/assets/js/20.c6d562a5.js"><link rel="prefetch" href="/blog/assets/js/21.afa33a3a.js"><link rel="prefetch" href="/blog/assets/js/22.98e61325.js"><link rel="prefetch" href="/blog/assets/js/3.93be9580.js"><link rel="prefetch" href="/blog/assets/js/4.4d64059e.js"><link rel="prefetch" href="/blog/assets/js/5.7beaad45.js"><link rel="prefetch" href="/blog/assets/js/6.8ebdf1bd.js"><link rel="prefetch" href="/blog/assets/js/7.31407d09.js"><link rel="prefetch" href="/blog/assets/js/8.2d006cd5.js"><link rel="prefetch" href="/blog/assets/js/9.2aa3a450.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.713b5711.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/logo.png" alt="lhs的个人博客" class="logo"> <span class="site-name can-hide">lhs的个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/js_docs/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/blog/css_docs/" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><a href="/blog/node_docs/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/blog/vue_docs/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/blog/react_docs/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="2020" class="dropdown-title"><span class="title">2020</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/2020/5/" class="nav-link">
+  May
+</a></li><li class="dropdown-item"><!----> <a href="/blog/2020/6/" class="nav-link">
+  June
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/other/" class="nav-link router-link-active">
+  其他
+</a></div><div class="nav-item"><a href="https://github.com/zeroonbush/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/js_docs/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/blog/css_docs/" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><a href="/blog/node_docs/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/blog/vue_docs/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/blog/react_docs/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="2020" class="dropdown-title"><span class="title">2020</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/2020/5/" class="nav-link">
+  May
+</a></li><li class="dropdown-item"><!----> <a href="/blog/2020/6/" class="nav-link">
+  June
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/other/" class="nav-link router-link-active">
+  其他
+</a></div><div class="nav-item"><a href="https://github.com/zeroonbush/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/other/" class="sidebar-link">第一篇博客在这里,你找到了吗</a></li><li><a href="/blog/other/vuepress搭建个人博客并部署.html" class="sidebar-link">vuepress搭建个人博客并部署</a></li><li><a href="/blog/other/Git常用指令.html" class="sidebar-link">Git常用指令</a></li><li><a href="/blog/other/npm发包流程.html" class="sidebar-link">npm发包流程</a></li><li><a href="/blog/other/发行ERC20代币.html" class="active sidebar-link">如何基于ERC20发行自己的代币</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/other/发行ERC20代币.html#安装插件" class="sidebar-link">安装插件</a></li><li class="sidebar-sub-header"><a href="/blog/other/发行ERC20代币.html#获取测试币" class="sidebar-link">获取测试币</a></li><li class="sidebar-sub-header"><a href="/blog/other/发行ERC20代币.html#编写合约代码" class="sidebar-link">编写合约代码</a></li><li class="sidebar-sub-header"><a href="/blog/other/发行ERC20代币.html#编译部署" class="sidebar-link">编译部署</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="如何基于erc20发行自己的代币"><a href="#如何基于erc20发行自己的代币" class="header-anchor">#</a> 如何基于ERC20发行自己的代币</h1> <blockquote><p>如今区块链的发展越来越迅速,也越来越被大众所熟知.而BTC作为区块链的一个产物,相信大家都听说过,甚至于持有过BTC.而以太坊（英文Ethereum）是一个开源的有智能合约功能的公共区块链平台，通过其专用加密货币以太币（Ether，简称&quot;ETH&quot;）提供去中心化的以太虚拟机（Ethereum Virtual Machine）来处理点对点合约。而正是以太坊智能合约让我们发行自己的代币成为一种不是那么难的事情</p></blockquote> <h2 id="安装插件"><a href="#安装插件" class="header-anchor">#</a> 安装插件</h2> <p>下面来讲讲在以太坊测试网络发行自己代币的一些流程
+首先,我们需要爬墙出去,安装一个叫做metamask的Chrome插件吧,<a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn" target="_blank" rel="noopener noreferrer">点我安装<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>
+安装metamask插件,添加至扩展程序,然后使用metamask,创建自己的账号,记住这些助记词,相当于自己的密钥.</p> <p><img src="https://img-blog.csdnimg.cn/20191214134439187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vZ3V6aGFsZQ==,size_16,color_FFFFFF,t_70" alt="此处输入图片的描述"></p> <p>点击切换到测试网络,一个代币在发布到正式环境之前肯定是要在测试网络进行开发测试的,毕竟在正式网络上都是要钱的啊.这里我们选择的是Ropsten 测试网络,刚开始我们的测试网络上的ETH是0,所以我们要先获取一些测试网络上的ETH,以供我们做测试使用.</p> <h2 id="获取测试币"><a href="#获取测试币" class="header-anchor">#</a> 获取测试币</h2> <p><img src="https://img-blog.csdnimg.cn/2019121413443473.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vZ3V6aGFsZQ==,size_16,color_FFFFFF,t_70" alt="此处输入图片的描述"></p> <p>这里我们从测试水龙头中获取一些ETH</p> <p><img src="https://img-blog.csdnimg.cn/20191214134439223.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vZ3V6aGFsZQ==,size_16,color_FFFFFF,t_70" alt="此处输入图片的描述">
+这里的第一个是获取,第二个是捐赠,我们点击第一个获取就行了,可以看到下面会生成一个hash,
+在 <a href="https://teth.bitaps.com/" target="_blank" rel="noopener noreferrer">https://teth.bitaps.com/<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 这个网站将刚刚生成的hash复制进去查询,就可以看到相对应的ETH转账记录.
+这里可以看到,我们的metamask已经刷新了,我们已经拥有了测试网络的ETH.</p> <h2 id="编写合约代码"><a href="#编写合约代码" class="header-anchor">#</a> 编写合约代码</h2> <p>接下来,我们打开 <a href="https://remix.ethereum.org/" target="_blank" rel="noopener noreferrer">https://remix.ethereum.org/<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 这个网站,这是一个名叫remix的在线编辑器,专门用于编写智能合约,这个编辑器也有本地的安装版本,在其github中可以获取到,这是官方推荐的编辑器,我们可以使用solidity编写智能合约.( 这里推荐一个编程游戏,可以教你学会简单的solidity , <a href="https://cryptozombies.io/zh/course" target="_blank" rel="noopener noreferrer">https://cryptozombies.io/zh/course<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>  ,这是一个打僵尸的游戏)</p> <p>在remix中新建一个文件,命名为MyToken.sol.注意这里用solidity编写的文件后缀名都是.sol ,在这个文件中编写我们自己的智能合约.</p> <h2 id="编译部署"><a href="#编译部署" class="header-anchor">#</a> 编译部署</h2> <p>编写完智能合约以后,我们要先进行编译.之后才是deploy我们的代币.
+这里我们使用的环境选择 Injected Web3,填写好deploy的参数
+<img src="https://img-blog.csdnimg.cn/20191214134439195.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vZ3V6aGFsZQ==,size_16,color_FFFFFF,t_70" alt="此处输入图片的描述"></p> <p>点击transact后 再次确认,就可以了,至此我们的智能合约就完成了.
+然后复制 Deployed Contracts 的智能合约地址, 在metamask中点击添加代币,自定义代币,将刚刚复制的智能合约的地址黏贴进去,就可以看到,我们刚刚创建时的tokenSymbol已经自动关联起来了,添加完代币以后,就可以看见我们刚刚创建的代币已经显示出来了,代币的名字其实是可以用中文的.</p> <p>自此,一个在测试网络的代币已经生成了.
+现在你是不是觉得那些在币圈的大部分币都是空气币了,因为发行一个token是如此的简单,几乎是没有什么成本.</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/other/npm发包流程.html" class="prev">
+        npm发包流程
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.1bea9912.js" defer></script><script src="/blog/assets/js/2.e1b088a4.js" defer></script><script src="/blog/assets/js/19.7b3766c1.js" defer></script>
+  </body>
+</html>
