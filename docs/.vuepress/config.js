@@ -25,7 +25,7 @@ module.exports = {
             //         { text: 'June', link: '/2020/6/' }
             //     ]
             // },
-            { text:'其他',link:'/other/' },
+            { text:'啥都有',link:'/other/' },
             { text: 'github', link: 'https://github.com/zeroonbush/blog.git' }
         ],
         sidebar: {
@@ -44,7 +44,8 @@ module.exports = {
                 'Git常用指令',
                 'npm发包流程',
                 '发行ERC20代币',
-                'Flutter构建Android包'
+                'Flutter构建Android包',
+                '简简单单的来入个deno的门吧'
             ],
             '/node_docs/':[
                 '',
