@@ -26,6 +26,7 @@ module.exports = {
             //     ]
             // },
             { text:'啥都有',link:'/other/' },
+            { text:'每周计划',link:'/plan/' },
             { text: 'github', link: 'https://github.com/zeroonbush/blog.git' }
         ],
         sidebar: {
@@ -47,6 +48,10 @@ module.exports = {
                 '发行ERC20代币',
                 'Flutter构建Android包',
                 '简简单单的来入个deno的门吧'
+            ],
+            '/plan/':[
+                '',
+                '200525-200531'
             ],
             '/node_docs/':[
                 '',
