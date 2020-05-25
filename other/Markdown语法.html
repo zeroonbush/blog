@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Markdown语法指南 | lhs的个人博客</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/blog/favicon.ico">
+    <meta name="description" content="前端开发 lhs的个人博客">
+    <link rel="preload" href="/blog/assets/css/0.styles.713b5711.css" as="style"><link rel="preload" href="/blog/assets/js/app.d87cc38d.js" as="script"><link rel="preload" href="/blog/assets/js/2.e1b088a4.js" as="script"><link rel="preload" href="/blog/assets/js/17.65ca0a44.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.ec962d2f.js"><link rel="prefetch" href="/blog/assets/js/11.24ef3a6c.js"><link rel="prefetch" href="/blog/assets/js/12.0297e3fc.js"><link rel="prefetch" href="/blog/assets/js/13.299bee3f.js"><link rel="prefetch" href="/blog/assets/js/14.a4348a31.js"><link rel="prefetch" href="/blog/assets/js/15.9534fafa.js"><link rel="prefetch" href="/blog/assets/js/16.b6dde68b.js"><link rel="prefetch" href="/blog/assets/js/18.af8a15a6.js"><link rel="prefetch" href="/blog/assets/js/19.22788ef2.js"><link rel="prefetch" href="/blog/assets/js/20.29f280e4.js"><link rel="prefetch" href="/blog/assets/js/21.c516a9a8.js"><link rel="prefetch" href="/blog/assets/js/22.15722f57.js"><link rel="prefetch" href="/blog/assets/js/23.318c619b.js"><link rel="prefetch" href="/blog/assets/js/24.4856d43b.js"><link rel="prefetch" href="/blog/assets/js/25.66ab39da.js"><link rel="prefetch" href="/blog/assets/js/26.f2004316.js"><link rel="prefetch" href="/blog/assets/js/27.51ea0379.js"><link rel="prefetch" href="/blog/assets/js/28.1fe15f98.js"><link rel="prefetch" href="/blog/assets/js/3.1194c316.js"><link rel="prefetch" href="/blog/assets/js/4.4d64059e.js"><link rel="prefetch" href="/blog/assets/js/5.0c3b9413.js"><link rel="prefetch" href="/blog/assets/js/6.26ebdff7.js"><link rel="prefetch" href="/blog/assets/js/7.52176edb.js"><link rel="prefetch" href="/blog/assets/js/8.6d4342be.js"><link rel="prefetch" href="/blog/assets/js/9.0a0401bc.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.713b5711.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/logo.png" alt="lhs的个人博客" class="logo"> <span class="site-name can-hide">lhs的个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/js_docs/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/blog/node_docs/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/blog/other/" class="nav-link router-link-active">
+  啥都有
+</a></div><div class="nav-item"><a href="/blog/plan/" class="nav-link">
+  每周计划
+</a></div><div class="nav-item"><a href="https://github.com/zeroonbush/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/js_docs/" class="nav-link">
+  JS
+</a></div><div class="nav-item"><a href="/blog/node_docs/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/blog/other/" class="nav-link router-link-active">
+  啥都有
+</a></div><div class="nav-item"><a href="/blog/plan/" class="nav-link">
+  每周计划
+</a></div><div class="nav-item"><a href="https://github.com/zeroonbush/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/other/" class="sidebar-link">第一篇博客在这里,你找到了吗</a></li><li><a href="/blog/other/tool.html" class="sidebar-link">工具篇</a></li><li><a href="/blog/other/vuepress搭建个人博客并部署.html" class="sidebar-link">vuepress搭建个人博客并部署</a></li><li><a href="/blog/other/Git常用指令.html" class="sidebar-link">Git常用指令</a></li><li><a href="/blog/other/Markdown语法.html" class="active sidebar-link">Markdown语法指南</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/other/Markdown语法.html#标题" class="sidebar-link">标题</a></li><li class="sidebar-sub-header"><a href="/blog/other/Markdown语法.html#字体" class="sidebar-link">字体</a></li><li class="sidebar-sub-header"><a href="/blog/other/Markdown语法.html#列表" class="sidebar-link">列表</a></li><li class="sidebar-sub-header"><a href="/blog/other/Markdown语法.html#任务列表" class="sidebar-link">任务列表</a></li><li class="sidebar-sub-header"><a href="/blog/other/Markdown语法.html#引用" class="sidebar-link">引用</a></li><li class="sidebar-sub-header"><a href="/blog/other/Markdown语法.html#分割线" class="sidebar-link">分割线</a></li><li class="sidebar-sub-header"><a href="/blog/other/Markdown语法.html#链接" class="sidebar-link">链接</a></li><li class="sidebar-sub-header"><a href="/blog/other/Markdown语法.html#图片" class="sidebar-link">图片</a></li><li class="sidebar-sub-header"><a href="/blog/other/Markdown语法.html#表格" class="sidebar-link">表格</a></li><li class="sidebar-sub-header"><a href="/blog/other/Markdown语法.html#代码" class="sidebar-link">代码</a></li><li class="sidebar-sub-header"><a href="/blog/other/Markdown语法.html#流程图" class="sidebar-link">流程图</a></li><li class="sidebar-sub-header"><a href="/blog/other/Markdown语法.html#兼容html" class="sidebar-link">兼容HTML</a></li><li class="sidebar-sub-header"><a href="/blog/other/Markdown语法.html#注解" class="sidebar-link">注解</a></li></ul></li><li><a href="/blog/other/npm发包流程.html" class="sidebar-link">npm发包流程</a></li><li><a href="/blog/other/发行ERC20代币.html" class="sidebar-link">如何基于ERC20发行自己的代币</a></li><li><a href="/blog/other/Flutter构建Android包.html" class="sidebar-link">Flutter构建Android APP</a></li><li><a href="/blog/other/简简单单的来入个deno的门吧.html" class="sidebar-link">deno入门指南</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="markdown语法指南"><a href="#markdown语法指南" class="header-anchor">#</a> Markdown语法指南</h1> <blockquote><p><strong>Markdown</strong>是一种轻量级标记语言,它允许人们使用易读易写的纯文本格式编写文档</p></blockquote> <h2 id="标题"><a href="#标题" class="header-anchor">#</a> 标题</h2> <p>使用 <code>#</code> 号可表示 1-6 级标题，一级标题对应一个 <code>#</code> 号，二级标题对应两个 <code>#</code> 号，以此类推。</p> <div class="language-Markdown extra-class"><pre class="language-markdown"><code><span class="token title important"><span class="token punctuation">#</span> 一级标题</span>
+<span class="token title important"><span class="token punctuation">##</span> 二级标题</span>
+<span class="token title important"><span class="token punctuation">###</span> 三级标题</span>
+<span class="token title important"><span class="token punctuation">####</span> 四级标题</span>
+<span class="token title important"><span class="token punctuation">#####</span> 五级标题</span>
+<span class="token title important"><span class="token punctuation">######</span> 六级标题</span>
+</code></pre></div><h2 id="字体"><a href="#字体" class="header-anchor">#</a> 字体</h2> <div class="language- extra-class"><pre class="language-text"><code>*我是斜体*
+_我是斜体_
+**我是粗体**
+__我是粗体__
+***我是粗斜体***
+___我是粗斜体___
+~~我是删除~~
+</code></pre></div><p>效果如下:</p> <p><em>我是斜体</em><br> <em>我是斜体</em><br> <strong>我是粗体</strong><br> <strong>我是粗体</strong><br> <em><strong>我是粗斜体</strong></em><br> <em><strong>我是粗斜体</strong></em><br> <s>我是删除</s></p> <h2 id="列表"><a href="#列表" class="header-anchor">#</a> 列表</h2> <h3 id="无序列表"><a href="#无序列表" class="header-anchor">#</a> 无序列表</h3> <p>使用<code>+</code>, <code>-</code>, <code>*</code> 其中任何一个作为标记</p> <div class="language-Markdown extra-class"><pre class="language-markdown"><code><span class="token list punctuation">*</span> list1
+<span class="token list punctuation">+</span> list2
+<span class="token list punctuation">-</span> list3
+</code></pre></div><ul><li>list1</li> <li>list2</li> <li>list3</li></ul> <h3 id="有序列表"><a href="#有序列表" class="header-anchor">#</a> 有序列表</h3> <p>使用数字 + <code>.</code>来表示</p> <div class="language-Markdown extra-class"><pre class="language-markdown"><code><span class="token list punctuation">1.</span> list1
+<span class="token list punctuation">2.</span> list2
+<span class="token list punctuation">3.</span> list3
+</code></pre></div><ol><li>list1</li> <li>list2</li> <li>list3</li></ol> <h3 id="列表嵌套"><a href="#列表嵌套" class="header-anchor">#</a> 列表嵌套</h3> <div class="language-Markdown extra-class"><pre class="language-markdown"><code><span class="token list punctuation">1.</span> list1
+  <span class="token list punctuation">-</span> list1-1
+  <span class="token list punctuation">-</span> list1-2
+<span class="token list punctuation">2.</span> list2
+  <span class="token list punctuation">-</span> list2-1
+  <span class="token list punctuation">-</span> list2-2
+
+</code></pre></div><ol><li>list1</li></ol> <ul><li>list1-1</li> <li>list1-2</li></ul> <ol start="2"><li>list2</li></ol> <ul><li>list2-1</li> <li>list2-2</li></ul> <h2 id="任务列表"><a href="#任务列表" class="header-anchor">#</a> 任务列表</h2> <p><strong>注:</strong> 此种写法在vuepress中无效,可以使用原生的复选框代替</p> <div class="language- extra-class"><pre class="language-text"><code>- [ ] 吃饭
+- [x] 睡觉  //打x的表示已完成
+- [ ] 打豆豆
+</code></pre></div><ul><li>[ ] 吃饭</li> <li>[x] 睡觉</li> <li>[ ] 打豆豆</li></ul> <div class="language- extra-class"><pre class="language-text"><code>&lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;吃饭&lt;/label&gt;
+&lt;label&gt;&lt;input type=&quot;checkbox&quot; checked&gt;睡觉&lt;/label&gt;
+&lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;打豆豆&lt;/label&gt;
+</code></pre></div><p><label><input type="checkbox">吃饭</label> <label><input type="checkbox" checked="checked">睡觉</label> <label><input type="checkbox">打豆豆</label></p> <h2 id="引用"><a href="#引用" class="header-anchor">#</a> 引用</h2> <p>可以无限引用,但是没什么太大的意义</p> <div class="language-Markdown extra-class"><pre class="language-markdown"><code><span class="token blockquote punctuation">&gt;</span> 前言:第一层引用
+<span class="token blockquote punctuation">&gt;&gt;</span> 前言:第二层引用
+</code></pre></div><blockquote><p>前言:第一层引用</p> <blockquote><p>前言:第二层引用</p></blockquote></blockquote> <h2 id="分割线"><a href="#分割线" class="header-anchor">#</a> 分割线</h2> <p>三个或三个以上的 <code>-</code> 或 <code>*</code></p> <div class="language- extra-class"><pre class="language-text"><code>---
+----
+***
+*****
+</code></pre></div><hr> <h2 id="链接"><a href="#链接" class="header-anchor">#</a> 链接</h2> <div class="language-Markdown extra-class"><pre class="language-markdown"><code><span class="token url">[<span class="token content">百度</span>](https://www.baidu.com)</span>
+</code></pre></div><p><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer">百度<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language-Markdown extra-class"><pre class="language-markdown"><code>&lt;https://www.baidu.com&gt;
+</code></pre></div><p><a href="https://www.baidu.com" target="_blank" rel="noopener noreferrer">https://www.baidu.com<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="图片"><a href="#图片" class="header-anchor">#</a> 图片</h2> <div class="language- extra-class"><pre class="language-text"><code>![alt 属性文本](图片链接)
+![占位符](https://iph.href.lu/200x200)
+</code></pre></div><p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pcGguaHJlZi5sdS8yMDB4MjAw?x-oss-process=image/format,png" alt="占位符"></p> <h2 id="表格"><a href="#表格" class="header-anchor">#</a> 表格</h2> <p>Markdown使用 <code>|</code> 来分隔不同单元格,使用 <code>-</code> 来分隔表头和主体</p> <div class="language- extra-class"><pre class="language-text"><code>|标题1|标题2|标题2
+| :- | :-: | -: 
+|行1列1|行1列2|行1列3
+|行2列1|行2列2|行2列3
+</code></pre></div><table><thead><tr><th style="text-align:left;">标题1</th> <th style="text-align:center;">标题2</th> <th style="text-align:right;">标题2</th></tr></thead> <tbody><tr><td style="text-align:left;">行1列1</td> <td style="text-align:center;">行1列2</td> <td style="text-align:right;">行1列3</td></tr> <tr><td style="text-align:left;">行2列1</td> <td style="text-align:center;">行2列2</td> <td style="text-align:right;">行2列3</td></tr></tbody></table> <ul><li><code>:-</code> 设置文本居左</li> <li><code>-:</code> 设置文本居右</li> <li><code>:-:</code> 设置文本居中</li></ul> <h2 id="代码"><a href="#代码" class="header-anchor">#</a> 代码</h2> <h3 id="单行代码"><a href="#单行代码" class="header-anchor">#</a> 单行代码</h3> <div class="language- extra-class"><pre class="language-text"><code>`console.log(1)`
+</code></pre></div><p>效果如下:
+<code>console.log(1)</code></p> <h3 id="代码块"><a href="#代码块" class="header-anchor">#</a> 代码块</h3> <div class="language- extra-class"><pre class="language-text"><code>(```)
+console.log(1)
+(```)
+</code></pre></div><p>这里在几个平台测试了一下,发现有的能显示,有的不能显示,所以这里在 ```外面包裹一层<code>()</code>只用于展示使用
+效果如下:</p> <div class="language- extra-class"><pre class="language-text"><code>console.log(1)
+</code></pre></div><h2 id="流程图"><a href="#流程图" class="header-anchor">#</a> 流程图</h2> <p>Markdown 还支持流程图或甘特图之类的.但是因为不同的平台对其支持都是不同的,有的支持,有的不支持,因此就不展示流程图的代码了.</p> <h2 id="兼容html"><a href="#兼容html" class="header-anchor">#</a> 兼容HTML</h2> <p>Markdown的目标是成为一种适用于网络的书写语言.它的标签较少,只对应了HTML中的一部分.不在其覆盖范围内的,我们可以使用html标签来书写.(貌似也有的平台是不支持的)</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;span style=&quot;color:orange;&quot;&gt;orange&lt;/span&gt;
+</code></pre></div><p>效果如下:
+<span style="color:orange;">orange</span></p> <h2 id="注解"><a href="#注解" class="header-anchor">#</a> 注解</h2> <p>使用<code>[^]</code>来定义注解：(<span style="color:red;">vuepress中无效</span>)</p> <div class="language- extra-class"><pre class="language-text"><code>我是一个注解[^注解1]  
+我也是一个注解[^注解2]  
+去[百度][1]
+
+[^注解1]:我是注解1  
+
+[^注解2]:我是注解2  
+[1]: http://www.baidu.com
+</code></pre></div><p>效果如下:</p> <p>我是一个注解<a href="%E6%88%91%E6%98%AF%E6%B3%A8%E8%A7%A31">^注解1</a><br>
+我也是一个注解<a href="%E6%88%91%E6%98%AF%E6%B3%A8%E8%A7%A32">^注解2</a><br>
+去<a href="http://www.baidu.com" target="_blank" rel="noopener noreferrer">百度<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/other/Git常用指令.html" class="prev">
+        Git常用指令
+      </a></span> <span class="next"><a href="/blog/other/npm发包流程.html">
+        npm发包流程
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.d87cc38d.js" defer></script><script src="/blog/assets/js/2.e1b088a4.js" defer></script><script src="/blog/assets/js/17.65ca0a44.js" defer></script>
+  </body>
+</html>
