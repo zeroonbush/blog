@@ -15,6 +15,7 @@ module.exports = {
             { text: 'JS', link: '/js_docs/' },
             // { text: 'CSS', link: '/css_docs/' },
             { text: 'Node', link: '/node_docs/' },
+            { text: 'Dart', link: '/dart/' },
             // { text: 'Vue', link: '/vue_docs/' },
             // { text: 'React', link: '/react_docs/' },
             // {
@@ -26,7 +27,7 @@ module.exports = {
             //     ]
             // },
             { text:'啥都有',link:'/other/' },
-            { text:'每周计划',link:'/plan/' },
+            // { text:'每周计划',link:'/plan/' },
             { text: 'github', link: 'https://github.com/zeroonbush/blog.git' }
         ],
         sidebar: {
@@ -50,14 +51,22 @@ module.exports = {
                 'Flutter构建Android包',
                 '简简单单的来入个deno的门吧'
             ],
-            '/plan/':[
-                '',
-                '200525-200531'
-            ],
+            // '/plan/':[
+            //     '',
+            //     '200525-200531'
+            // ],
             '/node_docs/':[
                 '',
                 'node发送邮件',
                 'exports和module.exports',
+            ],
+            '/dart/':[
+                '',
+                '变量和类型',
+                '函数',
+                '运算符和控制流程语句',
+                '类',
+                '其他'
             ]
         }
     }
