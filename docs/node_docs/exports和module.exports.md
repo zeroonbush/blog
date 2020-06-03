@@ -4,7 +4,7 @@
 其实,在node执行一个文件时,会给这个文件内生成一个 ``exports`` 对象和一个 ``module``    对象,而这个``module`` 对象又有一个属性叫做 ``exports`` 
 
 新建一个index.js文件 执行 ```node index.js```   命令
-```
+```javascript
 console.log(exports)
 console.log(module)
 ```
@@ -12,26 +12,26 @@ console.log(module)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200302152831257.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vZ3V6aGFsZQ==,size_16,color_FFFFFF,t_70)
 我们再来看看 ``exports`` 和 ``module.exports`` 有什么关系呢?
 我们在index.js 文件中添加一句代码
-```
+```javascript
 console.log(exports === module.exports)
 ```
 会发现结果是 ``true`` 这说明,文件开始执行的时候,它们是指向同一块内存区域的
 ![](https://user-gold-cdn.xitu.io/2020/3/3/1709df85ab1f6fd6?w=412&h=180&f=png&s=8444)
 
 当文件执行完毕的时候,只有``module.exports`` 变量被返回了,以便后续被其他模块 ``require`` 引用,为了证明这个观点,我们可以新建一个文件 index2.js 进行测试
-```
+```javascript
 //index2.js
 exports.a = 1
 ```
 然后在 index3.js 中引用
-```
+```javascript
 //index3.js
 const module2 = require('./index2')
 console.log(module2)
 ```
 控制台输出:  `{ a: 1 }`
 然后我们在 index2.js 中添加代码:
-```
+```javascript
 //index2.js
 exports.a = 1
 module.exports = {
@@ -40,18 +40,18 @@ module.exports = {
 ```
 在这里同时使用两个导出方法,查看控制台输出结果为 ``{ b: 2 }`` 
 此时,我们继续在 index2.js 文件中添加 
-```
+```javascript
 console.log(exports === module.exports)
 ```
 结果为``false``,此时的 ``exports`` 和 ``module.exports`` 已经不是指向同一块内存地址了,因为前面的代码里面,我们使用了
-```
+```javascript
 module.exports = {
   b:2
 }
 ```
 这导致了 ``module.exports``重新指向了新的内存地址, 但是当我们执行 ``node index3.js`` 查看index3.js 的运行结果时,看到的是 ``{b:2}`` 而不是 ``{a:1}`` 证明了我们上面的观点: 只有``module.exports`` 变量被返回了
 因此,初始化的状态,我们可以用如下代码来帮助理解:
-```
+```javascript
 var module = {
     exports:{}
 }
@@ -63,7 +63,7 @@ var exports = module.exports
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200302162045507.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vZ3V6aGFsZQ==,size_16,color_FFFFFF,t_70)
 
 这里,Node的官方文档里面提到, NodeJS 应用在文件被执行前会被包装一层:
-```
+```javascript
 (function(exports,require,module,__filename,__dirname){
   ...
 })

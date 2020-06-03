@@ -2,7 +2,7 @@
 > 我们大家都知道,JS有个很经典的浮点运算精度丢失问题,今天我们就来聊一聊这个问题产生的原因,以及该如何去解决它呢?
 
 先来看下面的代码,0.1+0.2的结果不等于0.3,这是不是超出了我们之前的认知呢?毕竟0.1+0.2=0.3可是我们小学就已经学会了的东西,到这里怎么就不一样了呢?
-```
+```javascript
 0.1 + 0.2  //0.30000000000000004
 ```
 下面让我们先来了解它是如何产生的,然后再去解决它.
@@ -13,11 +13,11 @@
 s为符号位,m为尾数,e为指数.
 
 ES6在`Number`对象上新增了一个极小的常量`Number.EPSILON`.根据规格,它表示1与大于1的最小浮点数之间的差.我们在控制台打印出它的结果,可以看到
-```
+```javascript
 Number.EPSILON //2.220446049250313e-16
 ```
 前面说到了64位浮点数中有52位是表示精度,那么比1大的最小浮点数应该就是`1.000..001`,这里小数点后面有51个0,然后1个1.这个数减去1的结果就是2的-52次方,也就是`Math.pow(2,-52)`,所以下面的结果会输出`true`
-```
+```javascript
 Number.EPSILON === Math.pow(2,-52)  //true
 ```
 所以,我们可以认为 `Number.EPSILON`是JS中能够表示的最小精度.当误差小于这个值的时候,就已经没有意义了,可以认为此时误差已经不存在了.即如果两个浮点数之间的差小于`Number.EPSILON`,则我们认为这两个浮点数是相等的.
@@ -55,7 +55,7 @@ Number.EPSILON === Math.pow(2,-52)  //true
 常见的函数库,比如[decimal.js](https://www.npmjs.com/package/decimal.js/v/10.0.0)等就可以解决这个问题
 ### 自己写函数
 知道了问题出在哪儿,我们也就有了解决思路.通常我们的做法是将浮点数变成整数来计算,然后再确定小数点的位置,下面的加法函数就实现了我们想要的结果.
-```
+```javascript
 function add(num1, num2){
   let r1, r2, m;
   try{
@@ -75,7 +75,7 @@ function add(num1, num2){
 相类似的, 还有减乘除的函数,我们也一并展示在下面:
 
 **减法函数:**
-```
+```javascript
 function sub(num1, num2){
   let r1, r2, m, n;
   try{
@@ -96,7 +96,7 @@ function sub(num1, num2){
 ```
 
 **乘法函数:**
-```
+```javascript
 function multiply(num1, num2){
   let m = 0,
   s1 = num1.toString(),
@@ -113,7 +113,7 @@ function multiply(num1, num2){
 ```
 
 **除法函数:**
-```
+```javascript
 function divide(num1, num2){
   let t1,t2,r1,r2;
   try {

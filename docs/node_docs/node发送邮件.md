@@ -3,18 +3,18 @@
 >
 
 ## 初始化项目
-```
+```shell
 mkdir node-mail && cd $_
 yarn init -y
 ```
 首先,我们创建一个项目然后进入此项目,并且进行初始化操作
 ## 安装插件
-```
+```shell
 yarn add nodemailer
 ```
 安装插件,具体插件的详细说明[看这里](https://nodemailer.com/about/)
 ## 编写代码
-```
+```javascript
 "use strict";
 const nodemailer = require('nodemailer')
 const fs = require('fs')
@@ -66,7 +66,7 @@ transporter.sendMail(mailOptions, (error, info) =>{
 **注意:** html里面是可以写样式的,内联样式和行内样式都是可以的.想要引用图片,若图片较小可以转为base64,图片较大则建议使用对象存储,引用cdn.
 ## 测试结果
 在终端键入 `node app.js` 查看运行结果,若出现下面的日志,则证明我们的邮件已经发送成功了
-```
+```shell
 {
   accepted: [ '12345@qq.com', '12346@qq.com' ],
   rejected: [],

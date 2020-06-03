@@ -1,6 +1,6 @@
 # void 0与undefined的关系
 在练习TypeScript的时候,在对比.ts文件和转换后的.js文件的时候:
-```
+```javascript
 //index.ts
 function getInfo(name:string, age:number=10):void {
     console.log(name)
@@ -8,7 +8,7 @@ function getInfo(name:string, age:number=10):void {
 }
 ```
 下面是转换后的文件:
-```
+```javascript
 // index.js
 function getInfo(name, age) {
     if (age === void 0) { age = 10; }
@@ -17,12 +17,12 @@ function getInfo(name, age) {
 }
 ```
 这里有个判断:
-```
+```javascript
 age === void 0
 ```
-在我的印象中,这里本来应该是undefined,但是却变成了void 0.所以我们来看看这两者之间有什么联系.
+在我的印象中,这里本来应该是`undefined,`但是却变成了`void 0`.所以我们来看看这两者之间有什么联系.
 为什么不直接使用undefined呢.这是因为undefined虽然在ES5中,是全局对象中一个只读属性(read-only),不能被重写,但是在局部作用域中,却是可以被重写的
-```
+```javascript
 (function(){
  var undefined = 1  //局部变量
  console.log(undefined)  //1
