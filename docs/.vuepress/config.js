@@ -14,9 +14,10 @@ module.exports = {
             { text: '首页', link: '/' },
             { text: 'JS', link: '/js_docs/' },
             // { text: 'CSS', link: '/css_docs/' },
+            { text: 'Vue', link: '/vue_docs/' },
             { text: 'Node', link: '/node_docs/' },
             { text: 'Dart', link: '/dart/' },
-            // { text: 'Vue', link: '/vue_docs/' },
+            
             // { text: 'React', link: '/react_docs/' },
             // {
             //     text: '2020',
@@ -43,10 +44,10 @@ module.exports = {
                '函数防抖和节流',
                'EventTarget介绍'
             ],
-            '/2020/': [
-                ['/2020/5/', '5月份'],
-                ['/2020/6/', '6月份']
-            ],
+            // '/2020/': [
+            //     ['/2020/5/', '5月份'],
+            //     ['/2020/6/', '6月份']
+            // ],
             '/other/':[
                 '',
                 'tool',
@@ -57,6 +58,10 @@ module.exports = {
                 '发行ERC20代币',
                 'Flutter构建Android包',
                 '简简单单的来入个deno的门吧'
+            ],
+            '/vue_docs/':[
+                 '',
+                 '数据响应式'
             ],
             // '/plan/':[
             //     '',
