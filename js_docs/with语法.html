@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>with语法 | lhs的个人博客</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/blog/favicon.ico">
+    <meta name="description" content="前端开发 lhs的个人博客">
+    <link rel="preload" href="/blog/assets/css/0.styles.713b5711.css" as="style"><link rel="preload" href="/blog/assets/js/app.0500660c.js" as="script"><link rel="preload" href="/blog/assets/js/2.e1b088a4.js" as="script"><link rel="preload" href="/blog/assets/js/24.e3e783b8.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.a5d3798e.js"><link rel="prefetch" href="/blog/assets/js/11.4a1e4d7e.js"><link rel="prefetch" href="/blog/assets/js/12.829c96cc.js"><link rel="prefetch" href="/blog/assets/js/13.0d0766eb.js"><link rel="prefetch" href="/blog/assets/js/14.fa98311e.js"><link rel="prefetch" href="/blog/assets/js/15.356fc737.js"><link rel="prefetch" href="/blog/assets/js/16.c68dfc4a.js"><link rel="prefetch" href="/blog/assets/js/17.59de5ebc.js"><link rel="prefetch" href="/blog/assets/js/18.8f060aac.js"><link rel="prefetch" href="/blog/assets/js/19.d9c03cf1.js"><link rel="prefetch" href="/blog/assets/js/20.58028a60.js"><link rel="prefetch" href="/blog/assets/js/21.cc98b43a.js"><link rel="prefetch" href="/blog/assets/js/22.68a161a1.js"><link rel="prefetch" href="/blog/assets/js/23.bd8cec3c.js"><link rel="prefetch" href="/blog/assets/js/25.e423773e.js"><link rel="prefetch" href="/blog/assets/js/26.9acd2107.js"><link rel="prefetch" href="/blog/assets/js/27.ce97d469.js"><link rel="prefetch" href="/blog/assets/js/28.72bc5374.js"><link rel="prefetch" href="/blog/assets/js/29.e012b24a.js"><link rel="prefetch" href="/blog/assets/js/3.c0eeec1f.js"><link rel="prefetch" href="/blog/assets/js/30.c00e6fd9.js"><link rel="prefetch" href="/blog/assets/js/31.934d231f.js"><link rel="prefetch" href="/blog/assets/js/32.79a558ee.js"><link rel="prefetch" href="/blog/assets/js/33.ca807b3a.js"><link rel="prefetch" href="/blog/assets/js/34.8d6e00b2.js"><link rel="prefetch" href="/blog/assets/js/35.403754c8.js"><link rel="prefetch" href="/blog/assets/js/36.891545a6.js"><link rel="prefetch" href="/blog/assets/js/37.1ee70460.js"><link rel="prefetch" href="/blog/assets/js/38.4d8270de.js"><link rel="prefetch" href="/blog/assets/js/39.7bf04555.js"><link rel="prefetch" href="/blog/assets/js/4.4d64059e.js"><link rel="prefetch" href="/blog/assets/js/40.088c5216.js"><link rel="prefetch" href="/blog/assets/js/41.7879faba.js"><link rel="prefetch" href="/blog/assets/js/42.ca070013.js"><link rel="prefetch" href="/blog/assets/js/43.997eb404.js"><link rel="prefetch" href="/blog/assets/js/44.7f31b8eb.js"><link rel="prefetch" href="/blog/assets/js/45.82a48519.js"><link rel="prefetch" href="/blog/assets/js/46.eb3799fc.js"><link rel="prefetch" href="/blog/assets/js/5.caeebc16.js"><link rel="prefetch" href="/blog/assets/js/6.05ae1b2b.js"><link rel="prefetch" href="/blog/assets/js/7.31407d09.js"><link rel="prefetch" href="/blog/assets/js/8.2d006cd5.js"><link rel="prefetch" href="/blog/assets/js/9.0d952458.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.713b5711.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/logo.png" alt="lhs的个人博客" class="logo"> <span class="site-name can-hide">lhs的个人博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/js_docs/" class="nav-link router-link-active">
+  JS
+</a></div><div class="nav-item"><a href="/blog/vue_docs/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/blog/node_docs/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/blog/dart/" class="nav-link">
+  Dart
+</a></div><div class="nav-item"><a href="/blog/other/" class="nav-link">
+  啥都有
+</a></div><div class="nav-item"><a href="https://github.com/zeroonbush/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/blog/js_docs/" class="nav-link router-link-active">
+  JS
+</a></div><div class="nav-item"><a href="/blog/vue_docs/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/blog/node_docs/" class="nav-link">
+  Node
+</a></div><div class="nav-item"><a href="/blog/dart/" class="nav-link">
+  Dart
+</a></div><div class="nav-item"><a href="/blog/other/" class="nav-link">
+  啥都有
+</a></div><div class="nav-item"><a href="https://github.com/zeroonbush/blog.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/js_docs/" class="sidebar-link">我是js的第一篇,没有什么内容</a></li><li><a href="/blog/js_docs/JS精度问题.html" class="sidebar-link">JS精度问题</a></li><li><a href="/blog/js_docs/Set数据结构.html" class="sidebar-link">ES6 Set 数据结构</a></li><li><a href="/blog/js_docs/Map数据结构.html" class="sidebar-link">ES6 Map 数据结构</a></li><li><a href="/blog/js_docs/with语法.html" class="active sidebar-link">with语法</a></li><li><a href="/blog/js_docs/void 0与undefined的关系.html" class="sidebar-link">void 0与undefined的关系</a></li><li><a href="/blog/js_docs/浅谈基本包装类型.html" class="sidebar-link">浅谈基本包装类型</a></li><li><a href="/blog/js_docs/js中容易忽略的参数.html" class="sidebar-link">js中容易忽略的参数</a></li><li><a href="/blog/js_docs/new的时候干了啥.html" class="sidebar-link">new的时候干了啥</a></li><li><a href="/blog/js_docs/JS调用函数的4种方式.html" class="sidebar-link">JS调用函数的4种方式</a></li><li><a href="/blog/js_docs/一文了解this指向.html" class="sidebar-link">一文了解this指向</a></li><li><a href="/blog/js_docs/函数防抖和节流.html" class="sidebar-link">函数防抖和节流</a></li><li><a href="/blog/js_docs/EventTarget介绍.html" class="sidebar-link">EventTarget介绍</a></li><li><a href="/blog/js_docs/深拷贝和浅拷贝了解一下.html" class="sidebar-link">来来来,深拷贝和浅拷贝了解一下</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="with语法"><a href="#with语法" class="header-anchor">#</a> with语法</h1> <blockquote><p>这两天在干活的时候,遇到了这么一个业务场景.就是后台接口返回的数据中有不少字段是我不需要的,而我只想保留几个我想要的数据字段,不想要整个对象赋值.</p></blockquote> <p>我们假设后台返回的数据如下:</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;code&quot; : &quot;200&quot;,
+  &quot;msg&quot; : &quot;操作成功&quot;,
+  &quot;data&quot; : {
+    &quot;name&quot;: &quot;zhangsan&quot;,
+    &quot;age&quot;: 12,
+    &quot;job&quot;: &quot;FE developer&quot;,
+    &quot;like&quot;: &quot;football&quot;
+  },
+  &quot;hasError&quot; : false
+}
+</code></pre></div><p>按照以前的做法,管它三七二十一,全给我拿来.直接把整个对象赋值给<code>myData</code></p> <div class="language- extra-class"><pre class="language-text"><code>aInterface().then(res =&gt; {
+    this.myData = res.data.data
+})
+</code></pre></div><p>然后在模板中使用:</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div&gt;
+    &lt;ul&gt;
+      &lt;li v-for=&quot;prop in myData&quot;&gt;
+        {{prop}}
+      &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre></div><p>而我现在只想要 <code>name</code>  和 <code>age</code> 这两个字段,上面的做法会将所有的属性值全部打印出来.所以,我采用的赋值方法一般是</p> <div class="language- extra-class"><pre class="language-text"><code>aInterface().then(res =&gt; {
+    const data = res.data.data
+    this.myData.name = data.name
+    this.myData.age = data.age
+})
+</code></pre></div><p>但是这样的写法就显得有点繁琐了,每次都要写 <code>this.myData</code> 这个变量了.此时想起了以前看到过的有个叫 <code>with</code> 的语句,语法是这样的:</p> <div class="language- extra-class"><pre class="language-text"><code>const obj = {
+  name:'zhangsan',
+  age:12
+}
+console.log(obj)  // {name: &quot;zhangsan&quot;, age: 12}
+
+obj.name = 'lisi'
+obj.age = 15
+console.log(obj)  // {name: &quot;lisi&quot;, age: 15}
+
+with(obj){
+  name = 'wangwu'
+  age = 18
+  job = 'fe'
+}
+console.log(obj)  // {name: &quot;wangwu&quot;, age: 18}
+</code></pre></div><p><code>obj.a = 11</code> 这种是我们最常见的给对象里面属性赋值的方式,而 <code>with</code> 后面跟了一个表达式 <code>obj</code> , 花括号里面的语句就只需要 <code>a = 111</code> 这样的赋值方式,感觉是可以少写一点代码了. 那么我们可以看出,其实 <code>with</code> 关键字改变了里面语句的作用域,在 <code>with</code> 代码块内部,变量会先被认为是一个局部变量,如果某个变量名与表达式 <code>obj</code> 中的一个属性名是一样的,那么这个局部变量就会指向 <code>obj</code> 对象中同名属性.但假如 <code>obj</code> 中没有一个属性名是与代码块中的局部变量的名字是一样的,那么此时就会发生污染全局变量的现象.不知道小伙伴们是否注意到了,上面的代码中,在代码块的最后,我加了 <code>job = 'fe'</code> 这样的一句语句.但是,console 控制台打印出来的 <code>obj</code> 中并没有包含这个属性.这就是因为此时的 <code>job</code> 这个变量已经泄漏到了全局作用域中了,我们可以继续在控制台执行下面代码</p> <div class="language- extra-class"><pre class="language-text"><code>console.log(job === window.job)  // true
+</code></pre></div><p>会发现结果是 <code>true</code> ,证明此时 <code>job</code> 已经是全局变量了.这就是 <code>with</code> 的其中一个弊端,容易数据泄漏,污染全局.而 <code>with</code> 的另外一个缺点就是会导致性能下降.我们来运行如下代码,然后在控制台查看运行结果:</p> <div class="language- extra-class"><pre class="language-text"><code>function test(){
+  console.time('test')
+  const obj = {
+    a:1
+  }
+  for(let i = 0;i &lt; 99999; i++){
+    const tmp = obj.a
+  }
+  console.timeEnd('test')
+}
+test()  // test: 1.2958984375ms
+
+function testWith(){
+  console.time('testWith')
+  const obj = {
+    a:1
+  }
+  with(obj){
+    for(let i = 0;i &lt; 99999; i++){
+      const tmp = a
+    }
+  }
+  
+  console.timeEnd('testWith')
+}
+testWith()  // testWith: 12.7939453125ms
+</code></pre></div><p><strong>注意:</strong> <code>console.time()</code> 方法是作为计算器的起始方法, <code>console.timeEnd()</code>方法作为计算器的结束方法 . 两个方法配合使用,一般是用来测试一段程序执行的时长.所以,这里两个函数的运行结果很可能是每次都不一样的,但是每次偏差应该都不会相差太大.由此,我们可以看出使用了 <code>with</code> 语句的代码所需要的时间更长.是没有使用with语句的好多倍.这是因为JavaScript引擎在编译阶段就进行一些性能优化,比如在执行之前就确定了一些变量的定义位置,然后在代码真正的执行过程中可以快速的找到标识符,而使用了 <code>with</code> 之后,因为无法知道传递到<code>with</code> 中的对象是哪个,所以JavaScript引擎它也会很懵逼,然后选择放弃,不做优化.</p> <p><strong>总结:</strong>
+我们代码中尽量不推荐使用 <code>with</code> 语句,并且在ES5严格模式中已经禁止该标签.但假如真的很想要用它的话,那么在 <code>with</code> 代码块的语句中,尽量使用指定对象的属性作为变量名,至少我们要保证尽量的不污染全局.</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/js_docs/Map数据结构.html" class="prev">
+        ES6 Map 数据结构
+      </a></span> <span class="next"><a href="/blog/js_docs/void 0与undefined的关系.html">
+        void 0与undefined的关系
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.0500660c.js" defer></script><script src="/blog/assets/js/2.e1b088a4.js" defer></script><script src="/blog/assets/js/24.e3e783b8.js" defer></script>
+  </body>
+</html>
