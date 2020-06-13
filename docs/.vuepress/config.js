@@ -35,6 +35,9 @@ module.exports = {
             '/js_docs/':[
                '',
                'JS精度问题',
+               'Set数据结构',
+               'Map数据结构',
+               'with语法',
                'void 0与undefined的关系',
                '浅谈基本包装类型',
                'js中容易忽略的参数',
