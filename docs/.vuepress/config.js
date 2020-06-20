@@ -48,7 +48,8 @@ module.exports = {
                'EventTarget介绍',
                '深拷贝和浅拷贝了解一下',
                '原型和原型链',
-               'JS生成UUID的多种方式'
+               'JS生成UUID的多种方式',
+               'JSON中的stringify方法'
             ],
             // '/2020/': [
             //     ['/2020/5/', '5月份'],
