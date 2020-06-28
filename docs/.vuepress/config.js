@@ -13,7 +13,7 @@ module.exports = {
         nav: [
             { text: '首页', link: '/' },
             { text: 'JS', link: '/js_docs/' },
-            // { text: 'CSS', link: '/css_docs/' },
+            { text: 'CSS', link: '/css_docs/' },
             { text: 'Vue', link: '/vue_docs/' },
             { text: 'Node', link: '/node_docs/' },
             { text: 'Dart', link: '/dart/' },
@@ -53,6 +53,11 @@ module.exports = {
                '一网打尽JS中的循环和遍历',
                '函数的形参和实参',
                '使用原生js实现一个回到顶部的功能',
+            ],
+            '/css_docs/':[
+              '',
+              '一些css片段',
+              '鼠标点击水波效果'
             ],
             // '/2020/': [
             //     ['/2020/5/', '5月份'],
