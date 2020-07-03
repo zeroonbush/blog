@@ -97,8 +97,10 @@ xhr.onload = function(){
 
 对于`CORS`的介绍,红宝书中是这么说的.它是一个W3C标准,定义了在必须访问跨域资源时,浏览器和服务器之间应该如何沟通.其背后基本思想,就是使用自定义的 HTTP头部让浏览器与服务器进行沟通,从而决定请求或响应是应该成功,还是应该失败.
 
-传统的跨域请求的解决方案基本就是`JSONP`和`iframe`.而现在要允许跨域访问,一般我们需要设置`Access-Control-Allow-Origin`,这是HTML5中定义的一种解决资源跨域的策略.需要浏览器和服务器同时支持.比如 `Access-Control-Allow-Origin:*`,这里的`*`表示所有域都能访问,如果只允许某个特定域访问的话,则设置如下:`Access-Control-Allow-Origin:http://www.xxx.com`,表示只有`http://www.xxx.com`这个网址下的可以正常访问该服务器,对于其他没有该标识的域则会提示禁止访问.当服务器返回的资源中加入了`Access-Control-Allow-Origin`头标识后,浏览器才允许跨域访问.我们来看下jsonplaceholder返回的响应头信息
+传统的跨域请求的解决方案基本就是`JSONP`和`iframe`.而现在要允许跨域访问,一般我们需要设置`Access-Control-Allow-Origin`,这是HTML5中定义的一种解决资源跨域的策略.需要浏览器和服务器同时支持.比如 `Access-Control-Allow-Origin:*`,这里的`*`表示所有域都能访问,如果只允许某个特定域访问的话,则设置如下:`Access-Control-Allow-Origin:http://www.xxx.com`,表示只有`http://www.xxx.com`这个网址下的可以正常访问该服务器,对于其他没有该标识的域则会提示禁止访问.当服务器返回的资源中加入了`Access-Control-Allow-Origin`头标识后,浏览器才允许跨域访问.我们来看下jsonplaceholder返回的响应头信息.
+
 ![response_header](https://blog-1257233417.cos.ap-nanjing.myqcloud.com/response_header.png)
+
 当然还有一种解决跨域问题的方案就是使用代理服务器,现在我们公司项目都是前后端分离的,在vue项目中,基本都自带了http服务器.在配置项中的`proxyTable`中进行设置即可.
 
 
