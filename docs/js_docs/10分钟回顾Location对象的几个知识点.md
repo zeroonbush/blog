@@ -100,6 +100,31 @@ setTimeout(() => {
 ```
 当然使用meta有一个不好的地方就是它的刷新和跳转是不可中途取消的.因此它的使用场景要视具体的业务而定.比如一个需要权限的页面被非法访问,那么就可以控制一定时间后自动跳到其他页面去.
 
+## 获取url中的查询字符串
+很多时候,我们有这样的需求,就是获取url查询字符串中某个key对应的value.比如在一个如 `http://127.0.0.1:5501/html/index.html?id=123&name=zhangsan` 的页面中获取id对应的值,也就是`123`.那么我们也有不少方法可以来做这个事情.
+
+传统的方法:
+```js
+function getUrlQuery(){
+  let url = window.location.search
+  let obj = Object.create(null)
+  if(url.includes('?')){
+    let str = url.substr(1)
+    let strs = str.split('&')
+    for(let i = 0;i < strs.length;i++){
+      obj[strs[i].split('=')[0]] = strs[i].split('=')[1]
+    }
+  }
+  return obj
+}
+```
+使用 `URLSearchParams` 接口:
+```js
+const urlParams = new URLSearchParams(window.location.search)
+console.log(urlParams.get('id'))  // 123
+```
+`URLSearchParams` 接口定义了一些实用的方法来处理URL中的查询字符串.[这里](https://developer.mozilla.org/zh-CN/docs/Web/API/URLSearchParams)是它的具体介绍,有兴趣的同学可以自己去看看,我们就先不展开了.
+
 ## 总结
 其实对于 `Location` 对象,它的知识相对而言并不是很多.在红宝书中也只有短短的3页内容.作为BOM中的一部分,它常常也会和 `Navigator`, `History`对象一起提到,这部分内容我们后面有时间再说好了.
 
