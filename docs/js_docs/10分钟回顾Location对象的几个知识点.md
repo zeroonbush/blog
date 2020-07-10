@@ -1,5 +1,5 @@
 # 10分钟回顾Location对象的几个知识点
-> Location对象包含有关当前URL的信息.它是Window对象的一部分,可通过`window.location`属性来访问.
+> Location对象包含有关当前URL的信息.它是一个比较特别的对象,因为它既是Window对象的一部分,可通过`window.location`属性来访问.也是document对象的属性,通过`document.location`来使用.
 
 我的页面路径是 `http://127.0.0.1:5501/html/index.html?id=123#test`,在控制台键入`window.location`,返回一个`Location`对象.
 
@@ -41,6 +41,7 @@ window.addEventListener('hashchange', () => {
 })
 ```
 执行上面的代码后,当我们改变url的hash部分时,控制台就会打印出提示.当然,对于那些不兼容`hashchange`事件的浏览器,也是有办法可以模拟的,比如设置一个定时器,每隔一定时间去查询当前的hash,和之前的hash去做对比从而判断url中的hash是否改变了.
+**注意:** 每次修改`location` 的属性(`hash`除外),页面都会以新URL重新加载.
 
 ### 补充案例
 曾经项目中有一个需求是这样的,点击按钮复制一个带有个人邀请码的注册链接.如这种样子的:`https://www.xx.com/register?code=8888`.那么这个链接就需要我们自己去拼接了.我原先伪代码如下
@@ -103,7 +104,7 @@ setTimeout(() => {
 ## 获取url中的查询字符串
 很多时候,我们有这样的需求,就是获取url查询字符串中某个key对应的value.比如在一个如 `http://127.0.0.1:5501/html/index.html?id=123&name=zhangsan` 的页面中获取id对应的值,也就是`123`.那么我们也有不少方法可以来做这个事情.
 
-传统的方法:
+### 传统方法
 ```js
 function getUrlQuery(){
   let url = window.location.search
@@ -112,13 +113,16 @@ function getUrlQuery(){
     let str = url.substr(1)
     let strs = str.split('&')
     for(let i = 0;i < strs.length;i++){
-      obj[strs[i].split('=')[0]] = strs[i].split('=')[1]
+        let tmp = strs[i].split('=')
+        obj[decodeURIComponent(tmp[0])] = decodeURIComponent(tmp[1])
     }
   }
   return obj
 }
 ```
-使用 `URLSearchParams` 接口:
+注意了,上面的代码中使用了 `decodeURIComponent` 来解码,因为查询字符串一般都是被 `encodeURIComponent` 编码过的,
+
+### URLSearchParams接口
 ```js
 const urlParams = new URLSearchParams(window.location.search)
 console.log(urlParams.get('id'))  // 123
@@ -127,7 +131,4 @@ console.log(urlParams.get('id'))  // 123
 
 ## 总结
 其实对于 `Location` 对象,它的知识相对而言并不是很多.在红宝书中也只有短短的3页内容.作为BOM中的一部分,它常常也会和 `Navigator`, `History`对象一起提到,这部分内容我们后面有时间再说好了.
-
-
-
 
