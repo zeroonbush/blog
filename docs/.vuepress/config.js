@@ -77,7 +77,8 @@ module.exports = {
                 'npm发包流程',
                 '发行ERC20代币',
                 'Flutter构建Android包',
-                '简简单单的来入个deno的门吧'
+                '简简单单的来入个deno的门吧',
+                '移动端300ms以及点击穿透'
             ],
             '/vue_docs/':[
                  '',
