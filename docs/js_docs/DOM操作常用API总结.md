@@ -343,9 +343,9 @@ console.log(r)  // <p class="p2">2</p>
 
 ## 总结:
 参考链接:
-- https://www.liaoxuefeng.com/wiki/1022910821149312/1026162402784992
-- http://luopq.com/2015/11/30/javascript-dom/
-- https://developer.mozilla.org/en-US/docs/Web/API
+- [https://www.liaoxuefeng.com/wiki/1022910821149312/1026162402784992](https://www.liaoxuefeng.com/wiki/1022910821149312/1026162402784992)
+- [http://luopq.com/2015/11/30/javascript-dom/](http://luopq.com/2015/11/30/javascript-dom/)
+- [https://developer.mozilla.org/en-US/docs/Web/API](https://developer.mozilla.org/en-US/docs/Web/API)
 
 ![DOM](https://img-blog.csdnimg.cn/20200722220558205.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vZ3V6aGFsZQ==,size_16,color_FFFFFF,t_70)
 
