@@ -54,7 +54,8 @@ module.exports = {
                '函数的形参和实参',
                '使用原生js实现一个回到顶部的功能',
                '5分钟回顾原生ajax的几个知识点',
-               '10分钟回顾Location对象的几个知识点'
+               '10分钟回顾Location对象的几个知识点',
+               'DOM操作常用API总结'
             ],
             '/css_docs/':[
               '',
@@ -78,7 +79,7 @@ module.exports = {
                 '发行ERC20代币',
                 'Flutter构建Android包',
                 '简简单单的来入个deno的门吧',
-                '移动端300ms以及点击穿透'
+                '移动端300ms延迟以及点击穿透'
             ],
             '/vue_docs/':[
                  '',
