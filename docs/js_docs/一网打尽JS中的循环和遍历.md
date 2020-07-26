@@ -1,4 +1,5 @@
 # 一网打尽JS中的循环和遍历
+
 > JS中的循环和遍历提供给我们一种简单快速的方法去做一些重复的事情.学会在不同的场景中使用不同的方法能够帮助我们有效的编写各类代码.在这里整理了一些常见的方法,今天就让我们大家一些来学习一波.
 
 ## for
@@ -85,7 +86,7 @@ console.log(arr2)  // ["212", "a12", "b12", "c12", "undefined12", "null12"]
 ```javascript
 let arr = [1,2,3]
 let tmp = arr.map(item => item + 1).map(item => item + 1)
-console.log(tmp)  // [3, 4, 5]
+console.log(tmp)  // [3, 4, 5]
 ```
 map还可以传入第二个参数,用来绑定回调函数内部的`this`变量
 ```javascript
@@ -225,6 +226,27 @@ for(let item of obj){
 console.log([...obj])  // ["a", "b"]
 ```
 
+## for await...of
+`for await...of` 可在一个可迭代对象上创建迭代循环,只能在 `async function` 内部使用.假如现在有一个数组,内部是有多个异步执行的函数,而我们想要同步执行每个函数
+```js
+(async function fun(){
+    let fn1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('fn1')
+        }, 1500)
+    })
+    let fn2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('fn2')
+        }, 200)
+    })
+    let fnArr = [fn1, fn2]
+    for await (let fn of fnArr){
+        console.log(fn)  // fn1 fn2 依次输出fn1,然后才是fn2
+    }
+})()
+```
+
 
 ## every
 对数组中的每一项进行函数运算,只有每一项都返回`true`,最后结果才会返回`true`.通俗的讲就是大家都满足要求才行.
@@ -257,7 +279,7 @@ console.log(res)  // 2
 使用上面几个方法可以分别获取对象的属性名,属性值,以及键值对.注意,`Object.keys`返回的是该对象自身的属性名,且只返回可枚举属性
 ```javascript
 let obj = {name:'zhangsan', age:12, job:'FE engineer'} 
-console.log(Object.keys(obj))  // ["name", "age", "job"]
+console.log(Object.keys(obj))  // ["name", "age", "job"]
 console.log(Object.values(obj))  // ["zhangsan", 12, "FE engineer"]
 console.log(Object.entries(obj))  // [["name", "zhangsan"],["age", 12],["job", "FE engineer"]]
 ```
@@ -290,12 +312,14 @@ if(Object.keys(obj).length){
 }
 ```
 
+
 ## 总结
 - `forEach`本质上也是数组的循环,和`for`循环语句差不多,但是语法简单了.并且`forEach`不会改变原数组,不会返回新数组.
 - `map`和`filter`都不会改变原数组,都会返回新数组.也正是因为能返回一个新数组,所以可以链式调用.不同之处在于`map`是对原数组进行加工,进行一对一的关系映射,而`filter`则是对原数组过滤,保留符合要求的数组成员.
 - `for...in`则会遍历对象的可枚举属性,包括原型对象上的属性.主要是为遍历对象而设计,不适用于遍历数组.
 - `for...of`遍历具有`Iterator`迭代器的对象,避开了`for...in`循环的所有缺陷,并且可以正确响应`break`,`continue`和`return`语句等.
+- `for await...of` 将异步循环变成同步循环
 - `every`和`some`有点类似于断言的感觉,返回布尔类型
 - `Object.keys()`返回一个给定对象的所有可枚举属性的字符串数组
 
-![在这里插入图片描述](https://user-gold-cdn.xitu.io/2020/6/24/172e5196ff84a73a?w=840&h=408&f=png&s=129662)
+![](https://imgconvert.csdnimg.cn/aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAyMC83LzI2LzE3MzhhMzNmNWQ0YzUwMzI?x-oss-process=image/format,png)
