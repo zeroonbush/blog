@@ -56,7 +56,8 @@ module.exports = {
                '5分钟回顾原生ajax的几个知识点',
                '10分钟回顾Location对象的几个知识点',
                'DOM操作常用API总结',
-               'JavaScript的执行机制'
+               'JavaScript的执行机制',
+               '多种方式实现前端图片下载'
             ],
             '/css_docs/':[
               '',
