@@ -57,7 +57,8 @@ module.exports = {
                '10分钟回顾Location对象的几个知识点',
                'DOM操作常用API总结',
                'JavaScript的执行机制',
-               '多种方式实现前端图片下载'
+               '多种方式实现前端图片下载',
+               '快来和fetch玩耍吧'
             ],
             '/css_docs/':[
               '',
