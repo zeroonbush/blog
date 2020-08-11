@@ -60,6 +60,7 @@ module.exports = {
                '多种方式实现前端图片下载',
                '快来和fetch玩耍吧',
                'Storage对象',
+               'instanceof和typeof原理回顾'
             ],
             '/css_docs/':[
               '',
